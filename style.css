@@ -15,43 +15,43 @@ body {
 }
 #up{
     position: absolute;
-    height: 800px;
-    width: 800px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     background-image: linear-gradient(80deg, rgb(5, 124, 172), rgb(43, 247, 202, 0.5));
     filter: blur(80px);
     overflow: hidden;
-    animation: down 5s infinite;
+    /* animation: down 5s infinite; */
 }
 #down{
     position: absolute;
     right: 0;
-    height: 500px;
-    width: 500px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     background-image: linear-gradient(80deg, rgb(245, 207, 82, 0.8), rgb(199, 10, 114));
     filter: blur(80px);
-    animation: up 30s infinite;
+    /* animation: up 30s infinite; */
 }
 #left{
     position: absolute;
-    height: 500px;
-    width: 500px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     background-image: linear-gradient(80deg, rgb(5, 124, 172), rgb(183, 253, 52, 0.8));
     filter: blur(80px);
-    animation: left 30s infinite;
+    /* animation: left 30s infinite; */
 }
 #right{
     position: absolute;
-    height: 500px;
-    width: 500px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     background-image: linear-gradient(80deg, rgb(26, 248, 18, 0.6), rgb(199, 10, 52, 0.8));
     filter: blur(80px);
-    animation: left 40s .5s infinite;
+    /* animation: left 40s .5s infinite; */
 }
-@keyframes down{
+/* @keyframes down{
     0%, 100%{ 
         top: -100px;
     }
@@ -82,7 +82,7 @@ body {
     70%{
         right: 700px;
     }
-}
+} */
 
 .container {
     position: relative;
@@ -110,7 +110,6 @@ header {
     margin-right: 20px;
     max-width: 30%;
 }
-
 .profile h2, .profile p {
     margin: 0;
     color: white;
@@ -131,20 +130,30 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
-
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 .links ul {
-    list-style: none;
-    padding: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .links li {
-    margin-bottom: 10px;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-right: 2px solid white;
+    list-style: none;
 }
 
 .links a {
     text-decoration: none;
+    margin: 10px;
     color: white;
     text-shadow: 0 3px 2px 0 rgba(90, 89, 89, 0.3);
 }
@@ -155,40 +164,199 @@ header {
 
 /* Tablet Responsive Design */
 @media (max-width: 768px) {
+    body {
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+     }
+     #up{
+         position: absolute;
+         height: 200px;
+         width: 200px;
+         border-radius: 50%;
+         background-image: linear-gradient(80deg, rgb(5, 124, 172), rgb(43, 247, 202, 0.5));
+         filter: blur(80px);
+         overflow: hidden;
+         /* animation: down 5s infinite; */
+     }
+     #down{
+         position: absolute;
+         right: 0;
+         height: 200px;
+         width: 200px;
+         border-radius: 50%;
+         background-image: linear-gradient(80deg, rgb(245, 207, 82, 0.8), rgb(199, 10, 114));
+         filter: blur(80px);
+         /* animation: up 30s infinite; */
+     }
+     #left{
+         position: absolute;
+         height: 200px;
+         width: 200px;
+         border-radius: 50%;
+         background-image: linear-gradient(80deg, rgb(5, 124, 172), rgb(183, 253, 52, 0.8));
+         filter: blur(80px);
+         /* animation: left 30s infinite; */
+     }
+     #right{
+         position: absolute;
+         height: 200px;
+         width: 200px;
+         border-radius: 50%;
+         background-image: linear-gradient(80deg, rgb(26, 248, 18, 0.6), rgb(199, 10, 52, 0.8));
+         filter: blur(80px);
+         /* animation: left 40s .5s infinite; */
+     }
+     .container {
+         padding: 0 5px;
+     }
+     .time-info{
+         justify-content: center;
+         align-items: center;
+         display: flex;
+         flex-direction: column;
+     }
+     .profile {
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+     }
+ 
+     .profile img {
+         max-width: 50%;
+         margin-bottom: 20px;
+     }
+ 
+     .goals {
+         width: 90%;
+         padding: 40px;
+         margin-left: 20px;
+         justify-content: center;
+     }
+ 
+     header h1 {
+         font-size: 1.5rem;
+     }
+     .links{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: column;
+     }
+     .links ul {
+         padding-left: 0;
+         display: flex;
+         justify-content: space-between;
+     }
+ 
+     .links li {
+        padding: 3px;
+         border-right: 2px solid white;
+         list-style: none;
+     }
+ 
+     .links a {
+        font-size: 1rem;
+        margin: 7px;
+     }
+ }
+
+/* Phone Responsive Design */
+@media (max-width: 600px) {
+    body {
+       height: 100%;
+       width: 100%;
+       padding: 20px;
+    }
+    #up{
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        background-image: linear-gradient(80deg, rgb(5, 124, 172), rgb(43, 247, 202, 0.5));
+        filter: blur(80px);
+        overflow: hidden;
+        /* animation: down 5s infinite; */
+    }
+    #down{
+        position: absolute;
+        right: 0;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        background-image: linear-gradient(80deg, rgb(245, 207, 82, 0.8), rgb(199, 10, 114));
+        filter: blur(80px);
+        /* animation: up 30s infinite; */
+    }
+    #left{
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        background-image: linear-gradient(80deg, rgb(5, 124, 172), rgb(183, 253, 52, 0.8));
+        filter: blur(80px);
+        /* animation: left 30s infinite; */
+    }
+    #right{
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        background-image: linear-gradient(80deg, rgb(26, 248, 18, 0.6), rgb(199, 10, 52, 0.8));
+        filter: blur(80px);
+        /* animation: left 40s .5s infinite; */
+    }
     .container {
-        padding: 0 10px;
+        padding: 0 5px;
+    }
+    .time-info{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .profile img {
         max-width: 50%;
-    }
-
-    .goals {
-        padding: 30px;
-    }
-}
-
-/* Phone Responsive Design */
-@media (max-width: 480px) {
-    .container {
-        padding: 0 5px;
-    }
-
-    .profile img {
-        max-width: 70%;
-        margin-right: 0;
         margin-bottom: 20px;
     }
 
-    .profile {
-        text-align: center;
-    }
-
     .goals {
-        padding: 20px;
+        width: 90%;
+        padding: 40px;
+        margin-left: 20px;
+        justify-content: center;
     }
 
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
     .links ul {
-        padding: 0 10px;
+        padding-left: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .links li {
+        padding: 1px;
+        margin-bottom: 5px;
+        border-right: 2px solid white;
+        list-style: none;
+    }
+
+    .links a {
+        font-size: 1rem; 
+        margin: 2px;
     }
 }
